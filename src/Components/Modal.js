@@ -1,19 +1,23 @@
-import React from 'react'
+import React from "react";
 
+const Modal = ({ showModal, data }) => {
+  const { user, urls, location } = data;
 
- const Modal = ({ showModal, cardData}) => {
-    const{user,urls,location}=cardData;
-    return (
-        <div className="modal-box" style={{display:showModal ===false ? "none" : "block"}}>
-        {/* 
-                <img src={urls.regular} alt="" />
-                <div className="details">
-                    <h2>{user.name}</h2>
-                    <p>{user.location}</p>
-    
-                </div>
-        */}
+  return (
+    <div className="modal-container">
+    <div
+      className="modal-box"
+      style={{ display: showModal === false ? "none" : null }}
+    >
+
+      <img src={urls.regular} alt="" />
+      <div className="details">
+        <h2>{user.name}</h2>
+        <p>{user.location}</p>
+      </div>
+      <button onClick={!showModal}>Close</button>
     </div>
-    )
-}
-export default Modal
+    </div>
+  );
+};
+export default Modal;

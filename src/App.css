@@ -26,9 +26,6 @@ input {
 
 img {
   width: 100%;
-  height: 100%;
-  margin-bottom: 0.5em;
-  z-index: 1;
 }
 
 .grid-section {
@@ -80,23 +77,22 @@ img {
 }
 
 /* modal styles*/
-
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  background: rgba(0, 0, 0, 0.5);
+}
 .modal-box {
   width: 60%;
-  bottom: 0;
-  margin: 15rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  opacity: 1;
-  pointer-events: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   position: fixed;
-  right: 0;
-  top: 0;
-  visibility: visible;
+  pointer-events: auto;
   z-index: 9;
-  height: 50vh;
+  height: 75vh;
   background-color: gray;
   border-radius: 10px;
 }
@@ -106,6 +102,6 @@ img {
   border-radius: 10px 10px 0 0;
 }
 .details {
-  line-height: 0.7;
+  line-height: 0.2;
   margin-left: 40px;
 }
